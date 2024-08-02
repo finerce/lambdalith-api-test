@@ -50,7 +50,7 @@ public class CountryController {
                 .orElse(null);
     }
 
-    @PutMapping("/saveByName")
+    @PostMapping("/saveByName")
     public List<Country> saveCountryByName(@RequestBody Country country) {
 
     	boolean exists = countryList.stream().anyMatch(existingCountry -> existingCountry.getName().equalsIgnoreCase(country.getName()));
